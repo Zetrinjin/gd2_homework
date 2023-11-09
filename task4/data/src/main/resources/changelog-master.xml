@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="nikita">
+        <sql>
+            CREATE TABLE IF NOT EXISTS expenses (
+            num int NOT NULL,
+            paydate date NULL,
+            receiver varchar(150) NULL,
+            value dec NULL,
+            PRIMARY KEY (num));
+        </sql>
+    </changeSet>
+
+    <!--Для 5-7 задания-->
+    <changeSet id="2" author="nikita">
+        <sql>
+            INSERT INTO expenses VALUES (1, '2011-5-10' , 'enter mag', 20000);
+            INSERT INTO expenses VALUES (2, '2011-5-10' ,'giper kor', 94200);
+            INSERT INTO expenses VALUES (3, '2011-5-11' ,'mts', 10000);
+            INSERT INTO expenses VALUES (4, '2011-5-11' ,'giper kor', 12950);
+            INSERT INTO expenses VALUES (5, '2011-5-11' , 'enter mag', 32000);
+            INSERT INTO expenses VALUES (6, '2011-5-12' ,'gum', 18500);
+            INSERT INTO expenses VALUES (7, '2011-5-12' ,'evroopt', 41900);
+            INSERT INTO expenses VALUES (8, '2011-5-12' ,'tsum', 13700);
+        </sql>
+    </changeSet>
+
+
+</databaseChangeLog>
