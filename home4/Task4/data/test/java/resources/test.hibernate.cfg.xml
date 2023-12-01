@@ -1,0 +1,29 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+
+    <session-factory>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/task_4_test</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="fight.pojo.Person"/>
+        <mapping class="fight.pojo.Student"/>
+        <mapping class="fight.pojo.Employer"/>
+        <mapping class="fight.pojo.Address"/>
+        <mapping class="fight.perClass.Developer"/>
+        <mapping class="fight.perClass.Game"/>
+        <mapping class="fight.perClass.Player"/>
+        <mapping class="fight.join.Mall"/>
+        <mapping class="fight.join.Merch"/>
+        <mapping class="fight.join.ProductShop"/>
+        <mapping class="fight.single.Employee"/>
+        <mapping class="fight.single.Person"/>
+        <mapping class="fight.single.Student"/>
+
+    </session-factory>
+
+</hibernate-configuration>
